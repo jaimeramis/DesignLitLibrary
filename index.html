@@ -1,15 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link href="/main.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Lit Components -->
-    <my-component name="Lit"></my-component>
-    <!-- END Lit Components -->
+    <main class="min-h-screen">
+      <div class="grid grid-cols-1 sm:grid-cols-4 h-auto sm:h-screen">
+        <section class="fixed sm:static w-full sm:w-auto col-span-1 h-auto sm:h-screen p-5 border-r border-r-gray-300 bg-yellow-200">
+          <nav-bar></nav-bar>
+        </section>
+
+        <section class="col-span-3 sm:col-span-3 text-center h-auto sm:h-screen p-5">
+          <!-- Lit Components -->
+          <my-component></my-component>
+          <!-- END Lit Components -->
+        </section>
+      </div>
+    </main>
+
     <!-- Import all modules -->
     <script type="module" src="./main.js"></script>
     <!-- END Import all modules -->
