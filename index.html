@@ -3,19 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Lit Library</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/static/img/favicon.ico" />
     <link href="/main.css" rel="stylesheet" />
   </head>
   <body>
-    <main class="min-h-screen">
+    <main class="min-h-screen w-full mx-auto">
       <div class="grid grid-cols-1 sm:grid-cols-4 h-auto sm:h-screen">
-        <section class="fixed sm:static w-full sm:w-auto col-span-1 h-auto sm:h-screen p-5 border-r border-r-gray-300 bg-yellow-200">
+        <section class="fixed sm:static w-full sm:w-auto col-span-1 h-auto sm:h-screen p-5 border-r border-gray-300 bg-slate-50">
           <nav-bar></nav-bar>
         </section>
 
-        <section class="col-span-3 sm:col-span-3 text-center h-auto sm:h-screen p-5">
+        <section class="col-span-3 sm:col-span-3 text-center h-auto sm:h-screen p-5 overflow-y-auto">
+          <div class="pt-20 pb-10 sm:pt-0 flex justify-center items-center gap-8">
+            <svg class="h-20 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 960">
+              <path d="M192 576l96-288 432 432-144 240-192-192h-96" fill="#00e8ff" />
+              <path d="M384 768V384l192-192v384m-480 0h96l96 192-96 192L0 768z" fill="#283198" fill-rule="evenodd" />
+              <path d="M192 576V192L384 0v384m192 576V576l192-192v384M0 768V384l192 192" fill="#324fff" />
+              <path d="M192 960V576l192 192" fill="#0ff" />
+            </svg>
+            <span class="text-4xl">+</span>
+            <svg class="h-14 w-auto" viewBox=".15 .13 799.7 479.69" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m400 .13c-106.63 0-173.27 53.3-199.93 159.89 39.99-53.3 86.64-73.28 139.95-59.96 30.42 7.6 52.16 29.67 76.23 54.09 39.2 39.78 84.57 85.82 183.68 85.82 106.62 0 173.27-53.3 199.92-159.9-39.98 53.3-86.63 73.29-139.95 59.97-30.41-7.6-52.15-29.67-76.22-54.09-39.2-39.78-84.58-85.82-183.68-85.82zm-199.93 239.84c-106.62 0-173.27 53.3-199.92 159.9 39.98-53.3 86.63-73.29 139.95-59.96 30.41 7.61 52.15 29.67 76.22 54.08 39.2 39.78 84.58 85.83 183.68 85.83 106.63 0 173.27-53.3 199.93-159.9-39.99 53.3-86.64 73.29-139.95 59.96-30.42-7.59-52.16-29.67-76.23-54.08-39.2-39.78-84.57-85.83-183.68-85.83z"
+                fill="#06b6d4" />
+            </svg>
+          </div>
+          <div class="flex flex-col justify-center text-center">
+            <h1 class="pb-10 text-3xl sm:text-4xl font-bold uppercase">Welcome to my <span class="text-blue-700">LitLibrary</span> with <span class="text-blue-700">Tailwind</span></h1>
+            <h3 class="pb-5 w-full sm:w-[70%] mx-auto">
+              This library was thought and created with the objective of learning how to use the <strong>Lit framework</strong>. I also decided to use the <strong>Tailwind CSS</strong> styles because
+              I found that styling with Lit was quite tedious.
+            </h3>
+            <h3 class="pb-5 w-full sm:w-[70%] mx-auto">
+              After completing the installation you will have at your mercy all the components that you have been creating according to your needs. For more information see the link to the
+              <strong>Github repository</strong>. Have a nice day and thanks for the visit! ☺️
+            </h3>
+          </div>
+
           <!-- Lit Components -->
-          <my-component></my-component>
           <!-- END Lit Components -->
         </section>
       </div>
