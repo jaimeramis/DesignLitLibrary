@@ -36,7 +36,7 @@ class Navbar extends LitElement {
               <path d="M192 960V576l192 192" fill="#0ff" />
             </svg>
             <div>
-              <button @click="${this.toggleMenu}" class="-m-2.5 rounded-md p-2.5 text-gray-700 sm:hidden">
+              <button @click="${this.toggleMenu}" class="-m-2.5 p-2.5 rounded-md sm:hidden text-gray-700">
                 <span class="sr-only">${this.show ? "close" : "open"}</span>
                 ${!this.show
                   ? html`<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -50,31 +50,31 @@ class Navbar extends LitElement {
           </div>
 
           <!-- Menu Content -->
-          <div class="pt-10 ${this.show ? "" : "hidden"} sm:block flex flex-col space-y-2">
-            <a href="#" target="_blank" class="block font-bold px-2 py-2 hover:bg-blue-200 rounded transition-all duration-300 ease-in-out"> Home </a>
-            <a href="#" target="_blank" class="block font-bold px-2 py-2 hover:bg-blue-200 rounded transition-all duration-300 ease-in-out"> Installation Guide </a>
+          <div class="flex flex-col ${this.show ? "" : "hidden"} pt-10 sm:block space-y-2">
+            <a href="#" target="_blank" class="block font-bold hover:bg-blue-200 px-2 py-2 rounded transition-all duration-300 ease-in-out"> Home </a>
+            <a href="#" target="_blank" class="block font-bold hover:bg-blue-200 px-2 py-2 rounded transition-all duration-300 ease-in-out"> Installation Guide </a>
 
             <!-- Botón para alternar la visibilidad de los componentes -->
-            <button @click="${this.toggleComponents}" class="w-full flex items-center font-bold px-2 py-2 hover:bg-blue-200 rounded transition-all duration-300 ease-in-out">
+            <button @click="${this.toggleComponents}" class="flex font-bold hover:bg-blue-200 items-center px-2 py-2 rounded transition-all w-full duration-300 ease-in-out">
               <span>Components</span>
-              <svg class="size-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+              <svg class="flex-none size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                 <path
-                  fill-rule="evenodd"
+                  clip-rule="evenodd"
                   d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                  clip-rule="evenodd" />
+                  fill-rule="evenodd" />
               </svg>
             </button>
 
             <!-- Contenido de los componentes, visible cuando 'showComponents' es true -->
-            <div class="${this.showComponents ? "max-h-screen" : "max-h-0"} overflow-hidden transition-all duration-300 ease-in-out">
-              <a href="#" target="_blank" class="block px-3 py-2 hover:text-blue-600 rounded"> Component 01 </a>
-              <a href="#" target="_blank" class="block px-3 py-2 hover:text-blue-600 rounded"> Component 02 </a>
-              <a href="#" target="_blank" class="block px-3 py-2 hover:text-blue-600 rounded"> Component 03 </a>
-              <a href="#" target="_blank" class="block px-3 py-2 hover:text-blue-600 rounded"> Component 04 </a>
+            <div class="overflow-hidden ${this.showComponents ? "max-h-screen" : "max-h-0"} transition-all duration-300 ease-in-out">
+              <a href="#" target="_blank" class="block hover:text-blue-600 px-3 py-2 rounded"> Component 01 </a>
+              <a href="#" target="_blank" class="block hover:text-blue-600 px-3 py-2 rounded"> Component 02 </a>
+              <a href="#" target="_blank" class="block hover:text-blue-600 px-3 py-2 rounded"> Component 03 </a>
+              <a href="#" target="_blank" class="block hover:text-blue-600 px-3 py-2 rounded"> Component 04 </a>
             </div>
 
-            <a href="https://www.linkedin.com/in/jaimeramisbarber/" target="_blank" class="block font-bold px-2 py-2 hover:bg-blue-200 rounded transition-all duration-300 ease-in-out"> LinkedIn </a>
-            <a href="https://github.com/jaimeramis/DesignLitLibrary.git" target="_blank" class="block font-bold px-2 py-2 hover:bg-blue-200 rounded transition-all duration-300"> Github </a>
+            <a href="https://www.linkedin.com/in/jaimeramisbarber/" target="_blank" class="block font-bold hover:bg-blue-200 px-2 py-2 rounded transition-all duration-300 ease-in-out">LinkedIn</a>
+            <a href="https://github.com/jaimeramis/DesignLitLibrary.git" target="_blank" class="block font-bold hover:bg-blue-200 px-2 py-2 rounded transition-all duration-300">Github</a>
           </div>
         </nav>
       </header>
@@ -82,4 +82,4 @@ class Navbar extends LitElement {
   }
 }
 
-customElements.define("nav-bar", Navbar);
+customElements.define("lt-navbar", Navbar);

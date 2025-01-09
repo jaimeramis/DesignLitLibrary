@@ -8,14 +8,16 @@
     <link href="/main.css" rel="stylesheet" />
   </head>
   <body>
-    <main class="min-h-screen w-full mx-auto">
-      <div class="grid grid-cols-1 sm:grid-cols-4 h-auto sm:h-screen">
-        <section class="fixed sm:static w-full sm:w-auto col-span-1 h-auto sm:h-screen p-5 border-r border-gray-300 bg-slate-50">
-          <nav-bar></nav-bar>
+    <main class="min-h-screen mx-auto w-full">
+      <div class="grid h-auto sm:h-screen grid-cols-1 sm:grid-cols-4">
+        <section class="bg-slate-50 border-gray-300 border-r col-span-1 fixed h-auto sm:h-screen p-5 sm:static sm:w-auto w-full z-50">
+          <!-- Navigation Left Bar -->
+          <lt-navbar></lt-navbar>
+          <!-- END Navigation Left Bar -->
         </section>
 
-        <section class="col-span-3 sm:col-span-3 text-center h-auto sm:h-screen p-5 overflow-y-auto">
-          <div class="pt-20 pb-10 sm:pt-0 flex justify-center items-center gap-8">
+        <section class="col-span-3 h-auto sm:h-screen overflow-y-auto p-5 sm:col-span-3 text-center">
+          <div class="flex gap-8 items-center justify-center pt-20 pb-10 sm:pt-0">
             <svg class="h-20 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 960">
               <path d="M192 576l96-288 432 432-144 240-192-192h-96" fill="#00e8ff" />
               <path d="M384 768V384l192-192v384m-480 0h96l96 192-96 192L0 768z" fill="#283198" fill-rule="evenodd" />
@@ -29,20 +31,101 @@
                 fill="#06b6d4" />
             </svg>
           </div>
-          <div class="flex flex-col justify-center text-center">
-            <h1 class="pb-10 text-3xl sm:text-4xl font-bold uppercase">Welcome to my <span class="text-blue-700">LitLibrary</span> with <span class="text-blue-700">Tailwind</span></h1>
-            <h3 class="pb-5 w-full sm:w-[70%] mx-auto">
+          <div class="flex flex-col justify-center mx-auto pb-20 text-center w-full sm:w-[80%]">
+            <h1 class="font-bold pb-10 text-3xl sm:text-4xl uppercase">Welcome to my <span class="text-blue-700">LitLibrary</span> with <span class="text-blue-700">Tailwind</span></h1>
+            <h3 class="pb-5">
               This library was thought and created with the objective of learning how to use the <strong>Lit framework</strong>. I also decided to use the <strong>Tailwind CSS</strong> styles because
               I found that styling with Lit was quite tedious.
             </h3>
-            <h3 class="pb-5 w-full sm:w-[70%] mx-auto">
-              After completing the installation you will have at your mercy all the components that you have been creating according to your needs. For more information see the link to the
-              <strong>Github repository</strong>. Have a nice day and thanks for the visit! ☺️
+            <h3 class="pb-5">
+              After completing the installation you will have at your disposal all the components that I have been creating according to my needs. For more information see the link to the
+              <a href="https://github.com/jaimeramis/DesignLitLibrary.git" target="_blank" class="font-bold hover:text-blue-700 rounded transition-all duration-300">Github</a>.<br />Have a nice day
+              and thanks for the visit! ☺️
             </h3>
           </div>
-
-          <!-- Lit Components -->
-          <!-- END Lit Components -->
+          <!-- Component Section -->
+          <div class="text-left">
+            <h2 class="font-bold pb-10 text-4xl uppercase">List of <span class="text-blue-700">Components</span></h2>
+            <!-- Accordeon -->
+            <div>
+              <h2 class="border-b-2 border-blue-700 font-bold mb-5 pb-3 text-4xl uppercase text-blue-700">Accordion</h2>
+              <!-- Default -->
+              <h3 class="font-bold pb-3 text-2xl uppercase">Default</h3>
+              <div class="mb-5 flex flex-col gap-4 sm:flex-row px-5 py-5 rounded-lg border-2 border-gray-500/20">
+                <!-- Lit Components -->
+                <div class="w-full">
+                  <lt-accordion color="default" subtitle=""> </lt-accordion>
+                </div>
+                <!-- END Lit Components -->
+              </div>
+              <!-- END Default -->
+              <!-- Colors -->
+              <h3 class="font-bold pb-3 text-2xl uppercase">Colors</h3>
+              <div class="mb-5 flex flex-col gap-4 sm:flex-row px-5 py-5 rounded-lg border-2 border-gray-500/20">
+                <!-- Lit Components -->
+                <div class="w-full">
+                  <lt-accordion color="default" subtitle=""> </lt-accordion>
+                  <lt-accordion color="blue" subtitle=""> </lt-accordion>
+                  <lt-accordion color="green" subtitle=""> </lt-accordion>
+                  <lt-accordion color="red" subtitle=""> </lt-accordion>
+                  <lt-accordion color="orange" subtitle=""> </lt-accordion>
+                </div>
+                <!-- END Lit Components -->
+              </div>
+              <!-- END Colors -->
+              <!-- Variants -->
+              <h3 class="font-bold pb-3 text-2xl uppercase">Variants</h3>
+              <div class="mb-5 flex flex-col gap-4 sm:flex-row px-5 py-5 rounded-lg border-2 border-gray-500/20">
+                <!-- Lit Components -->
+                <div class="w-full">
+                  <lt-accordion color="none" subtitle=""> </lt-accordion>
+                  <lt-accordion color="none"> </lt-accordion>
+                  <lt-accordion color="default"> </lt-accordion>
+                </div>
+                <!-- END Lit Components -->
+              </div>
+              <!-- END Variants -->
+            </div>
+            <!-- END Accordeon -->
+            <!-- Buttons -->
+            <div>
+              <h2 class="border-b-2 border-blue-700 font-bold mb-5 pb-3 text-4xl uppercase text-blue-700">Button</h2>
+              <!-- Button Colors -->
+              <h3 class="font-bold pb-3 text-2xl uppercase">Colors</h3>
+              <div class="mb-5 flex flex-col gap-4 sm:flex-row px-5 py-5 rounded-lg border-2 border-gray-500/20">
+                <!-- Lit Components -->
+                <lt-button label="Default"></lt-button>
+                <lt-button label="Standard" color="blue"></lt-button>
+                <lt-button label="Success" color="green"></lt-button>
+                <lt-button label="Failure" color="red"></lt-button>
+                <lt-button label="Warning" color="orange"></lt-button>
+                <!-- END Lit Components -->
+              </div>
+              <!-- END Button Colors -->
+              <!-- Button Size -->
+              <h3 class="font-bold pb-3 text-2xl uppercase">Size</h3>
+              <div class="mb-5 flex flex-col gap-4 sm:flex-row px-5 py-5 rounded-lg border-2 border-gray-500/20">
+                <!-- Lit Components -->
+                <lt-button label="Small size" size="small"></lt-button>
+                <lt-button label="Medium / Base size" size="medium"></lt-button>
+                <lt-button label="Large size" size="large"></lt-button>
+                <!-- END Lit Components -->
+              </div>
+              <!-- END Button Size -->
+              <!-- Button Radius -->
+              <h3 class="font-bold pb-3 text-2xl uppercase">Radius</h3>
+              <div class="mb-5 flex flex-col gap-4 sm:flex-row px-5 py-5 rounded-lg border-2 border-gray-500/20">
+                <!-- Lit Components -->
+                <lt-button label="Default Radius"></lt-button>
+                <lt-button label="Full Radius" rounded="full"></lt-button>
+                <lt-button label="None Radius" rounded="none"></lt-button>
+                <!-- END Lit Components -->
+              </div>
+              <!-- END Button Radius -->
+            </div>
+            <!-- END Buttons -->
+          </div>
+          <!--END Component Section -->
         </section>
       </div>
     </main>
