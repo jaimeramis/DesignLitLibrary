@@ -59,19 +59,38 @@ class Accordion extends LitElement {
 
     return html`
       <div class="accordion-item border-b border-gray-300">
-        <button class="w-full text-left px-6 py-4 ${ColorClass} hover:opacity-90 focus:outline-none flex justify-between items-center" @click="${() => this.toggleItem(0)}">
+        <button
+          class="${ColorClass} flex w-full items-center justify-between px-6 py-4 text-left hover:opacity-90 focus:outline-none"
+          @click="${() => this.toggleItem(0)}"
+        >
           <div>
-            <h3 class="font-bold text-md sm:text-lg">${this.title}</h3>
+            <h3 class="text-md font-bold sm:text-lg">${this.title}</h3>
             <h4 class="text-xs sm:text-sm">${this.subtitle}</h4>
           </div>
-          <span class="transform transition-transform duration-300" style="transform: rotate(${this.openIndex === 0 ? 180 : 0}deg)">
-            <svg class="w-3 h-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+          <span
+            class="transform transition-transform duration-300"
+            style="transform: rotate(${this.openIndex === 0 ? 180 : 0}deg)"
+          >
+            <svg
+              class="h-3 w-3 shrink-0"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5 5 1 1 5"
+              />
             </svg>
           </span>
         </button>
 
-        <div class="accordion-content overflow-hidden transition-[max-height] duration-300 ease-in-out max-h-0">
+        <div
+          class="accordion-content max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out"
+        >
           <p class="px-6 py-4 text-xs sm:text-sm">${this.content}</p>
         </div>
       </div>

@@ -45,7 +45,11 @@ class Button extends LitElement {
     const color = colorClasses[this.color] || colorClasses.default;
     const rounded = roundedClasses[this.rounded] || "rounded-md";
 
-    return html`<button class="w-full ${size} ${color} ${rounded} transition transform active:scale-90 duration-100 ease-in-out">${this.label}</button> `;
+    return html`<button
+      class="${size} ${color} ${rounded} w-full transform align-middle transition duration-100 ease-in-out active:scale-90"
+    >
+      ${this.label}
+    </button> `;
   }
 }
 
